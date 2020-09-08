@@ -117,7 +117,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #5a2017;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   position: fixed;
   width: 68%;
