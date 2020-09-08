@@ -23,8 +23,9 @@
 
     <nav class="Navigation" id="Navigation">
       <div class="logo">
-        <div id="menu" class="menu" >
-          <span onclick="open_ham();"><img id="menu_btn" src="svg/ham_menu.svg" alt="ham_menu" /></span>
+        <div id="menu" class="menu">
+
+          <span onclick="open_ham();"><img id="menu_btn" src="svg/ham_menu.svg" alt="ham_menu"/></span>
         </div>
         <div class="cosmo_logo">
           <span><img src="svg/logo.svg" alt="" /></span>
@@ -357,11 +358,14 @@
       <div id="toggle" style="visibility: hidden;">
       </div>
       <div>
-        <img src="image/nothingFound.png" id="notFound" style="display: none;" alt="" />
+        <!-- <img src="" id="notFoundq" style="display: none;" alt="" /> -->
+        <div id="notFound" class="notFound" style="display: none;">
+          <h1>No photos for this day, Try another date</h1>
+        </div>
         <img src="" id="pic" alt="" />
         <img src="" id="frontImg" />
         <img src="" id="rearImg" />
-        <img src="image/loading.jpg" style="display: none;" id="loadImg" alt="" />
+        <img src="image/nothingFound.png" style="display: none;" id="loadImg" alt="" />
       </div>
       <div id="imageContainer" class="imageContainer"></div>
 

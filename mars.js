@@ -49,6 +49,7 @@ window.onclick = function (e) {
   if (e.target !== hide) {
     ham_menu.classList.add("ham-deactive");
     ham_menu.classList.remove("ham-active");
+    document.body.style.overflow = "scroll";
     if (e.target == ham_menu) {
       ham_menu.classList.add("ham-active");
       ham_menu.classList.remove("ham-deactive");
@@ -144,9 +145,9 @@ function enableBtn() {
   document.getElementById("prev").disabled = false;
 }
 // This function will leave a message whenever photos will not available.
-function errorImage(mode) {
+function errorImage() {
   disableImage();
-  document.getElementById("notFound").style.display = mode;
+  document.getElementById("notFound").style.display = "flex";
 }
 // for enable main image
 function enableImage() {
@@ -710,6 +711,7 @@ function getDateSelect() {
 }
 
 function open_ham() {
+  document.body.style.overflow="hidden";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");

@@ -77,11 +77,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: $color;
+  height: 100%;
+  // height: 100vh;
   z-index: 1;
   position: fixed;
   width: 68%;
   transform: translateX(-100%);
-  height: 100%;
+
   // padding-top: 17px;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
   a {
@@ -348,14 +350,8 @@ body {
 
 //Modal Header section
 
-
-
 // #modalHeader {
 
-
-  
-   
-    
 //     #next,
 //     #prev {
 //       fill: white;
@@ -363,10 +359,9 @@ body {
 //       width: 32px;
 //     }
 
-  
 //   #closeDiv {
 //     /* margin-right: 25px; */
-    
+
 //     position: absolute;
 //     top: 10px;
 //     right: 10px;
@@ -374,17 +369,17 @@ body {
 //     border-radius: 100px;
 //     border: 1px solid transparent;
 //   }
-  
+
 //   #closeDiv:hover {
 //     border-color: #fff;
 //     transition: all 0.25s ease-out;
 //   }
-  
+
 //   .close {
 //     fill: white;
 //     transform: scale(1.7);
 //   }
-  
+
 //   #close {
 //     padding: 10px;
 //     background-color: transparent;
@@ -438,7 +433,7 @@ body {
 
 #modalHeader {
   position: absolute;
-  height:100vh;
+  height: 100vh;
   width: 100%;
   top: 0;
   display: none;
@@ -451,7 +446,6 @@ body {
   align-items: center;
   background-color: transparent;
   // animation: modalImageOpenAnimation 0.3s linear;
-  
 }
 
 #closeDiv {
@@ -461,7 +455,7 @@ body {
   height: 52px;
   border-radius: 100px;
   border: 1px solid transparent;
-  background-color:transparent;
+  background-color: transparent;
   position: absolute;
 }
 
@@ -470,15 +464,14 @@ body {
   transition: all 0.25s ease-out;
 }
 
-
 #close {
   background-color: transparent;
   height: 52px;
   width: 52px;
   border: 2px solid transparent;
-  .close{
+  .close {
     color: white;
-    font-size:32px;
+    font-size: 32px;
   }
 }
 
@@ -488,7 +481,7 @@ body {
   position: absolute;
   background-color: transparent;
   width: 100%;
- }
+}
 .button {
   outline: none;
   cursor: pointer;
@@ -500,17 +493,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
- #next,#prev{
-   color: white;
-   font-size:32px;
- }
+
+  #next,
+  #prev {
+    color: white;
+    font-size: 32px;
+    outline: none;
+    user-select: none;
+  }
 }
 
 button:focus {
   outline: 0;
 }
 
-
+// if there are no images
 
 
 .footer {
@@ -532,6 +529,19 @@ button:focus {
 
 .footer_logo a img {
   height: 40px;
+}
+
+.notFound{
+  height: 80px;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  background-color:red;
+  h1{
+    color: white;
+    font-family: $font-family;
+    font-size: 14px;
+    }
 }
 
 // OLD CSS CODE
@@ -578,34 +588,25 @@ button:focus {
 //   transform: scale(1.03);
 // }
 
-
-
 @keyframes modalImageOpenAnimation {
   0% {
     transform: scale(0.8);
-    
   }
 
   100% {
     transform: scale(1);
-    
   }
 }
 
 @keyframes modalImageCloseAnimation {
   0% {
     transform: scale(1);
-  
   }
 
   100% {
     transform: scale(0.8);
-  
   }
 }
-
-
-
 
 .lrb.active {
   fill: black;
