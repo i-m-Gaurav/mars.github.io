@@ -77,12 +77,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: $color;
-  height: 100vh;
   z-index: 1;
   position: fixed;
   width: 68%;
   transform: translateX(-100%);
-
+  height: auto;
   // padding-top: 17px;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
   a {
