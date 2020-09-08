@@ -49,7 +49,7 @@ window.onclick = function (e) {
   if (e.target !== hide) {
     ham_menu.classList.add("ham-deactive");
     ham_menu.classList.remove("ham-active");
-    document.body.style.overflow = "scroll";
+    document.body.style.overflowY = "scroll";
     if (e.target == ham_menu) {
       ham_menu.classList.add("ham-active");
       ham_menu.classList.remove("ham-deactive");
@@ -711,7 +711,7 @@ function getDateSelect() {
 }
 
 function open_ham() {
-  document.body.style.overflow="hidden";
+  document.body.style.overflowY="hidden";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
