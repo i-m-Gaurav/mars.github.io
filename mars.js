@@ -40,6 +40,7 @@ var index;
 var getCamera;
 var today;
 
+
 //function for hamburger menu
 
 window.onclick = function (e) {
@@ -49,7 +50,7 @@ window.onclick = function (e) {
   if (e.target !== hide) {
     ham_menu.classList.add("ham-deactive");
     ham_menu.classList.remove("ham-active");
-    document.body.style.overflowY = "scroll";
+    document.body.style.overflow = "scroll";
     if (e.target == ham_menu) {
       ham_menu.classList.add("ham-active");
       ham_menu.classList.remove("ham-deactive");
@@ -164,11 +165,20 @@ function showPic() {
   imageContainer = document.getElementById("imageContainer");
   while (i < data.photos.length) {
     ImgBox = document.createElement("div");
+
+    //TODO
+
+    anchorForEachImage = document.createElement("a");
+    anchorForEachImage.href = "#box";
+    ImgBox.appendChild(anchorForEachImage);
+
+
     img = document.createElement("img");
     img.className = "cardImage";
     ImgBox.id = "card";
     ImgBox.classList.add("card");
-    ImgBox.appendChild(img);
+    anchorForEachImage.appendChild(img);
+    // ImgBox.appendChild(img);
     img.src = data.photos[i].img_src;
     img.onload = function () {
       loadingImg("none");
@@ -711,7 +721,7 @@ function getDateSelect() {
 }
 
 function open_ham() {
-  document.body.style.overflowY="hidden";
+  document.body.style.overflow="hidden";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
@@ -760,3 +770,17 @@ function getViewportDimensions() {
     document.documentElement.style.setProperty("--vw", `${vw}px`);
   });
 }
+
+window.addEventListener("hashchange", myFunction);
+
+
+function myFunction() {
+  location.hash = "box";
+  var x = location.hash;
+  if(x !== "box")
+  {
+    box.classList.remove("active");
+  }
+  
+}
+
