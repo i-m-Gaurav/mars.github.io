@@ -41,6 +41,10 @@ var getCamera;
 var today;
 
 
+
+
+
+
 //function for hamburger menu
 
 window.onclick = function (e) {
@@ -775,12 +779,10 @@ window.addEventListener("hashchange", myFunction);
 
 
 function myFunction() {
-  location.hash = "box";
-  var x = location.hash;
-  if(x !== "box")
+  
+  if(location.hash === '#imageContainer')
   {
     box.classList.remove("active");
   }
   
 }
-
