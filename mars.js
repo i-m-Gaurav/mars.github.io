@@ -40,29 +40,23 @@ var index;
 var getCamera;
 var today;
 
-
 //function for hamburger menu
 
-window.onclick = function(e){
-  const hide = document.getElementById('menu_btn');
-  const ham_menu = document.getElementById('ham_menu');
+window.onclick = function (e) {
+  const hide = document.getElementById("menu_btn");
+  const ham_menu = document.getElementById("ham_menu");
 
-  if(e.target !== hide){
-    ham_menu.classList.add('ham-deactive');
-    ham_menu.classList.remove('ham-active');
-    if(e.target == ham_menu)
-    {
-      ham_menu.classList.add('ham-active');
-      ham_menu.classList.remove('ham-deactive');
-
+  if (e.target !== hide) {
+    ham_menu.classList.add("ham-deactive");
+    ham_menu.classList.remove("ham-active");
+    if (e.target == ham_menu) {
+      ham_menu.classList.add("ham-active");
+      ham_menu.classList.remove("ham-deactive");
     }
-
+  } else {
+    ham_menu.classList.remove("ham-deactive");
   }
-  else
-  {
-    ham_menu.classList.remove('ham-deactive');
-  }
-}
+};
 
 // it will fetch current day using select option
 
@@ -114,8 +108,6 @@ function check_spi() {
   rover = spirit;
   getDay();
 }
-
-
 
 // * this function will send the httpRequest to the nasa api server, it takes three arguments, 1. Method (that could be GET or POST),2. url , 3. mode (either true or false).
 
@@ -667,7 +659,6 @@ function hideOnScroll() {
       document.body.scrollTop > 4000 ||
       document.documentElement.scrollTop > 4000
     ) {
-    
       mybutton.style.display = "block";
     } else {
       mybutton.style.display = "none";
@@ -719,10 +710,10 @@ function getDateSelect() {
 }
 
 function open_ham() {
-  const ham_menu = document.querySelector('menu_btn');
-  const ham = document.querySelector('.ham_menu');
-  ham.classList.toggle('ham-active');
-  ham_menu.classList.remove('ham-deactive');
+  const ham_menu = document.querySelector("menu_btn");
+  const ham = document.querySelector(".ham_menu");
+  ham.classList.toggle("ham-active");
+  ham_menu.classList.remove("ham-deactive");
 
   // var ham = document.querySelector(".ham_menu");
 
@@ -733,11 +724,6 @@ function open_ham() {
   //   ham.style.display = "none";
   // }
 }
-
-
-
-
-
 
 // window.onload = function{
 //   const hidediv = document.getElementById('ham_menu');
@@ -750,6 +736,25 @@ function open_ham() {
 // }
 
 // const app = () =>{
- 
+
 // }
 
+function getViewportDimensions() {
+  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+  let vh = window.innerHeight * 0.01;
+  let vw = window.innerWidth * 0.01;
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+  document.documentElement.style.setProperty("--vw", `${vw}px`);
+
+  // We listen to the resize event
+  window.addEventListener("resize", () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    let vw = window.innerWidth * 0.01;
+    // console.log(vh);
+    // console.log(vw);
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty("--vw", `${vw}px`);
+  });
+}
