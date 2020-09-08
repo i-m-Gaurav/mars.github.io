@@ -785,5 +785,6 @@ function myFunction() {
 function swipeImage(event) {
   var x = event.touches[0].clientX;
   var y = event.touches[0].clientY;
+  alert('hello');
   document.getElementById("demo").innerHTML = x + ", " + y;
 }
