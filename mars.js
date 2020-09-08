@@ -40,11 +40,6 @@ var index;
 var getCamera;
 var today;
 
-
-
-
-
-
 //function for hamburger menu
 
 window.onclick = function (e) {
@@ -176,15 +171,14 @@ function showPic() {
     anchorForEachImage.href = "#box";
     ImgBox.appendChild(anchorForEachImage);
 
-
     img = document.createElement("img");
     img.className = "cardImage";
     ImgBox.id = "card";
     ImgBox.classList.add("card");
     anchorForEachImage.appendChild(img);
     // ImgBox.appendChild(img);
+    img.ontouchmove = "swipeImage(event);";
     img.src = data.photos[i].img_src;
-    img.onclick = alert("hello");
     img.onload = function () {
       loadingImg("none");
 
@@ -726,7 +720,7 @@ function getDateSelect() {
 }
 
 function open_ham() {
-  document.body.style.overflow="hidden";
+  document.body.style.overflow = "hidden";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
@@ -776,18 +770,14 @@ function getViewportDimensions() {
   });
 }
 
-
 // when use press back button on phone or desktop browser this it will jump you to the prev page.
 
 window.addEventListener("hashchange", myFunction);
 
 function myFunction() {
-  
-  if(location.hash === '#imageContainer')
-  {
+  if (location.hash === "#imageContainer") {
     box.classList.remove("active");
   }
-  
 }
 
 // This one is for changing images with swipe gesture for touch devices like mobile, tablet etc.
@@ -797,5 +787,3 @@ function swipeImage(event) {
   var y = event.touches[0].clientY;
   document.getElementById("demo").innerHTML = x + ", " + y;
 }
-
-
