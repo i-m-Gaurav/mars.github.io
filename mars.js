@@ -184,6 +184,7 @@ function showPic() {
     anchorForEachImage.appendChild(img);
     // ImgBox.appendChild(img);
     img.src = data.photos[i].img_src;
+    img.onclick = alert("hello");
     img.onload = function () {
       loadingImg("none");
 
@@ -775,8 +776,10 @@ function getViewportDimensions() {
   });
 }
 
-window.addEventListener("hashchange", myFunction);
 
+// when use press back button on phone or desktop browser this it will jump you to the prev page.
+
+window.addEventListener("hashchange", myFunction);
 
 function myFunction() {
   
@@ -786,3 +789,13 @@ function myFunction() {
   }
   
 }
+
+// This one is for changing images with swipe gesture for touch devices like mobile, tablet etc.
+
+function swipeImage(event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+  document.getElementById("demo").innerHTML = x + ", " + y;
+}
+
+
