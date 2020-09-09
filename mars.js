@@ -52,6 +52,7 @@ window.onclick = function (e) {
     ham_menu.classList.add("ham-deactive");
     ham_menu.classList.remove("ham-active");
     document.body.style.overflowY = "scroll";
+    document.body.style.position = "relative";
     if (e.target == ham_menu) {
       ham_menu.classList.add("ham-active");
       ham_menu.classList.remove("ham-deactive");
