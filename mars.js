@@ -738,7 +738,8 @@ function getDateSelect() {
 function open_ham() {
   document.body.style.overflowY = "hidden";
   document.body.style.height = "height: calc(var(--vh, 1vh) * 100)";
-  document.body.style.maxHeight = "max-height: calc(var(--vh, 1vh) * 100 - 6.4rem - 2.4rem)";
+  document.body.style.maxHeight =
+    "max-height: calc(var(--vh, 1vh) * 100 - 6.4rem - 2.4rem)";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
@@ -795,15 +796,12 @@ window.addEventListener("hashchange", myFunction);
 function myFunction() {
   var box = document.getElementById("box");
   try {
-    if (location.hash === "#imageContainer")
-    {
+    if (location.hash === "#imageContainer") {
       box.classList.remove("active");
     }
   } catch (error) {
     console.log("");
-    
   }
- 
 }
 
 // This one is for changing images with swipe gesture for touch devices like mobile, tablet etc.
@@ -814,10 +812,8 @@ function swipeImage(event) {
   document.getElementById("demo").innerHTML = x + ", " + y;
 }
 
-
-function resetSelectOptionAfterRoverChange()
-{
-  document.getElementById('day').selectedIndex = "0";
-  document.getElementById('month').selectedIndex = "0";
-  document.getElementById('year').selectedIndex = "0";
+function resetSelectOptionAfterRoverChange() {
+  document.getElementById("day").selectedIndex = "0";
+  document.getElementById("month").selectedIndex = "0";
+  document.getElementById("year").selectedIndex = "0";
 }
