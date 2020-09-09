@@ -737,6 +737,8 @@ function getDateSelect() {
 
 function open_ham() {
   document.body.style.overflow = "hidden";
+  document.body.style.height = "height: calc(var(--vh, 1vh) * 100);"
+  document.body.style.maxHeight = "max-height: calc(var(--vh, 1vh) * 100 - 6.4rem - 2.4rem);"
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
