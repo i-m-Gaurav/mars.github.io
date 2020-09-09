@@ -51,7 +51,7 @@ window.onclick = function (e) {
   if (e.target !== hide) {
     ham_menu.classList.add("ham-deactive");
     ham_menu.classList.remove("ham-active");
-    document.body.style.overflow = "scroll";
+    document.body.style.overflowY = "scroll";
     if (e.target == ham_menu) {
       ham_menu.classList.add("ham-active");
       ham_menu.classList.remove("ham-deactive");
@@ -737,13 +737,11 @@ function getDateSelect() {
 
 function open_ham() {
   document.body.style.overflowY = "hidden";
-  document.body.style.height = "height: calc(var(--vh, 1vh) * 100)";
-  document.body.style.maxHeight =
-    "max-height: calc(var(--vh, 1vh) * 100 - 6.4rem - 2.4rem)";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
   ham_menu.classList.remove("ham-deactive");
+  
 
   // var ham = document.querySelector(".ham_menu");
 
