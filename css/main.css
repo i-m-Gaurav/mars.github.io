@@ -12,8 +12,6 @@ html {
 
 body {
   background-color: #5a2017;
-  height: 100%;
-  overflow: hidden;
 }
 
 .Navigation {
@@ -119,7 +117,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #5a2017;
-  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100 - 6.4rem - 2.4rem);
   z-index: 1;
   position: fixed;
   width: 68%;

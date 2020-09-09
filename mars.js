@@ -40,6 +40,8 @@ var index;
 var getCamera;
 var today;
 
+getViewportDimensions();
+
 //function for hamburger menu
 
 window.onclick = function (e) {

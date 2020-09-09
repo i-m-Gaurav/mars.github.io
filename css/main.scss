@@ -12,8 +12,6 @@ html {
 }
 body {
   background-color: $color;
-  height: 100%;
-  overflow: hidden;
 }
 
 .Navigation {
@@ -79,7 +77,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: $color;
-  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100 - 6.4rem - 2.4rem);
   // height: 100vh;
   z-index: 1;
   position: fixed;
