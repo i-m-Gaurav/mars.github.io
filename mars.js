@@ -93,18 +93,22 @@ function selectRover() {
 
 function check_cur() {
   var cur_rover = document.getElementById("curiosity_r");
+  resetSelectOptionAfterRoverChange();
+  removeChild();
   cur_rover.checked = true;
   rover = curiosity;
   getDay();
 }
 function check_opp() {
   var opp_rover = document.getElementById("opportunity_r");
+  resetSelectOptionAfterRoverChange();
   opp_rover.checked = true;
   rover = opportunity;
   getDay();
 }
 function check_spi() {
   var spi_rover = document.getElementById("spirit_r");
+  resetSelectOptionAfterRoverChange();
   spi_rover.checked = true;
   rover = spirit;
   getDay();
@@ -145,9 +149,9 @@ function enableBtn() {
   document.getElementById("prev").disabled = false;
 }
 // This function will leave a message whenever photos will not available.
-function errorImage() {
+function errorImage(mode) {
   disableImage();
-  document.getElementById("notFound").style.display = "flex";
+  document.getElementById("notFound").style.display = mode;
 }
 // for enable main image
 function enableImage() {
@@ -190,7 +194,8 @@ function showPic() {
     img.onerror = () => {
       loadingImg("none");
       disableImage();
-      errorImage("inline");
+      errorImage("flex");
+      disableCamera();
     };
     imageContainer.appendChild(ImgBox);
     i++;
@@ -245,7 +250,8 @@ function fcam() {
       date_change();
       if (data.photos.length < 1) {
         // alert("we are here");
-        errorImage("inline");
+        errorImage("flex");
+        disableCamera();
         loadingImg("none");
         // disableImage();
         console.log("no data found for this date!");
@@ -269,7 +275,8 @@ function rcam() {
 
       if (data.photos.length < 1) {
         // alert("we are here");
-        errorImage("inline");
+        errorImage("flex");
+        disableCamera();
         loadingImg("none");
         // disableImage();
         console.log("no data found for this date!");
@@ -294,7 +301,8 @@ function navcam() {
 
       if (data.photos.length < 1) {
         // alert("we are here");
-        errorImage("inline");
+        errorImage("flex");
+        disableCamera();
         loadingImg("none");
         // disableImage();
         console.log("no data found for this date!");
@@ -319,7 +327,8 @@ function chemCam() {
 
       if (data.photos.length < 1) {
         // alert("we are here");
-        errorImage("inline");
+        errorImage("flex");
+        disableCamera();
         loadingImg("none");
         // disableImage();
         console.log("no data found for this date!");
@@ -344,7 +353,8 @@ function mahliCam() {
 
       if (data.photos.length < 1) {
         // alert("we are here");
-        errorImage("inline");
+        errorImage("flex");
+        disableCamera();
         loadingImg("none");
         // disableImage();
         console.log("no data found for this date!");
@@ -369,7 +379,8 @@ function mardiCam() {
 
       if (data.photos.length < 1) {
         // alert("we are here");
-        errorImage("inline");
+        errorImage("flex");
+        disableCamera();
         loadingImg("none");
         // disableImage();
         console.log("no data found for this date!");
@@ -394,7 +405,8 @@ function mastcam() {
 
       if (data.photos.length < 1) {
         // alert("we are here");
-        errorImage("inline");
+        errorImage("flex");
+        disableCamera();
         loadingImg("none");
         // disableImage();
         console.log("no data found for this date!");
@@ -516,7 +528,8 @@ function allPhotos() {
     date_change();
     if (data.photos.length < 1) {
       // alert("we are here");
-      errorImage("inline");
+      errorImage("flex");
+      disableCamera();
       removeChild();
       loadingImg("none");
       // disableImage();
@@ -585,7 +598,8 @@ function fetchCamera() {
   sendHttpRequest(method, update_url + imgDate, mode).then((test) => {
     date_change();
     if (data.photos.length < 1) {
-      errorImage("inline");
+      errorImage("flex");
+      disableCamera();
       loadingImg("none");
       console.log("no data found for this date!");
     } else {
@@ -775,9 +789,17 @@ function getViewportDimensions() {
 window.addEventListener("hashchange", myFunction);
 
 function myFunction() {
-  if (location.hash === "#imageContainer") {
-    box.classList.remove("active");
+  var box = document.getElementById("box");
+  try {
+    if (location.hash === "#imageContainer")
+    {
+      box.classList.remove("active");
+    }
+  } catch (error) {
+    console.log("");
+    
   }
+ 
 }
 
 // This one is for changing images with swipe gesture for touch devices like mobile, tablet etc.
@@ -785,6 +807,13 @@ function myFunction() {
 function swipeImage(event) {
   var x = event.touches[0].clientX;
   var y = event.touches[0].clientY;
-  alert('hello');
   document.getElementById("demo").innerHTML = x + ", " + y;
+}
+
+
+function resetSelectOptionAfterRoverChange()
+{
+  document.getElementById('day').selectedIndex = "0";
+  document.getElementById('month').selectedIndex = "0";
+  document.getElementById('year').selectedIndex = "0";
 }

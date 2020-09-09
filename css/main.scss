@@ -12,6 +12,8 @@ html {
 }
 body {
   background-color: $color;
+  height: 100%;
+  overflow: hidden;
 }
 
 .Navigation {
@@ -536,7 +538,6 @@ button:focus {
   width:100%;
   justify-content: center;
   align-items: center;
-  background-color:red;
   h1{
     color: white;
     font-family: $font-family;
