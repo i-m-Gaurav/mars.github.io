@@ -510,7 +510,6 @@ button:focus {
 
 // if there are no images
 
-
 .footer {
   width: 100%;
   display: flex;
@@ -532,16 +531,16 @@ button:focus {
   height: 40px;
 }
 
-.notFound{
+.notFound {
   height: 80px;
-  width:100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  h1{
+  h1 {
     color: white;
     font-family: $font-family;
     font-size: 14px;
-    }
+  }
 }
 
 // OLD CSS CODE

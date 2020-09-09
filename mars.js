@@ -51,8 +51,8 @@ window.onclick = function (e) {
   if (e.target !== hide) {
     ham_menu.classList.add("ham-deactive");
     ham_menu.classList.remove("ham-active");
-    document.body.style.overflowY = "scroll";
-    document.body.style.position = "relative";
+    document.body.style.overflowY = "scroll"
+    // document.body.style.position = "relative";
     if (e.target == ham_menu) {
       ham_menu.classList.add("ham-active");
       ham_menu.classList.remove("ham-deactive");
@@ -61,6 +61,8 @@ window.onclick = function (e) {
     ham_menu.classList.remove("ham-deactive");
   }
 };
+
+
 
 // it will fetch current day using select option
 
@@ -105,6 +107,7 @@ function check_cur() {
 function check_opp() {
   var opp_rover = document.getElementById("opportunity_r");
   resetSelectOptionAfterRoverChange();
+  removeChild();
   opp_rover.checked = true;
   rover = opportunity;
   getDay();
@@ -112,6 +115,7 @@ function check_opp() {
 function check_spi() {
   var spi_rover = document.getElementById("spirit_r");
   resetSelectOptionAfterRoverChange();
+  removeChild();
   spi_rover.checked = true;
   rover = spirit;
   getDay();
@@ -737,13 +741,18 @@ function getDateSelect() {
 }
 
 function open_ham() {
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${window.scrollY}px`;
+  
+
+
+ 
+  // console.log(scrollY);
   document.body.style.overflowY = "hidden";
+  document.body.style.height = "100%";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
   ham_menu.classList.remove("ham-deactive");
+
   
 
   // var ham = document.querySelector(".ham_menu");
