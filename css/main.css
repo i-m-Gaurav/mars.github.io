@@ -118,7 +118,6 @@ body {
           justify-content: space-between;
   background-color: #5a2017;
   height: calc(var(--vh, 1vh) * 100);
-  max-height: calc(var(--vh, 1vh) * 100 - 6.4rem - 2.4rem);
   z-index: 1;
   position: fixed;
   width: 68%;
