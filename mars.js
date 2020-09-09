@@ -736,6 +736,8 @@ function getDateSelect() {
 }
 
 function open_ham() {
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${window.scrollY}px`;
   document.body.style.overflowY = "hidden";
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
