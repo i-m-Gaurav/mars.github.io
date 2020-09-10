@@ -368,7 +368,7 @@ body.modal-open {
 }
 
 #choose_date_page {
-  height: 23vh;
+  height: 170px;
   width: 100%;
   display: none;
 }
@@ -459,7 +459,7 @@ body.modal-open {
           justify-content: center;
   margin-left: 13px;
   color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 12px;
 }
 
@@ -485,6 +485,13 @@ body.modal-open {
 
 .Spirit_date_range_active {
   display: inline;
+}
+
+.wrapper_div_camera_angle {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: cyan;
 }
 
 .camera_angles_section {
@@ -661,7 +668,7 @@ body.modal-open {
   cursor: pointer;
   border-radius: 50%;
   border: none;
-  background-color: rgba(0, 0, 0, 0.157);
+  background-color: rgba(0, 0, 0, 0.596);
   height: 45px;
   width: 45px;
   display: -webkit-box;
@@ -708,11 +715,11 @@ button:focus {
 }
 
 .footer_heading h3 {
-  color: white;
+  color: #ffffff9d;
+  color: #b4b4b4;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 12px;
-  opacity: 0.5;
 }
 
 .footer_logo a img {
@@ -759,6 +766,7 @@ button:focus {
 }
 
 .imageContainer {
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -979,9 +987,6 @@ button:focus {
 }
 
 @media all and (min-width: 1025px) {
-  .main_body {
-    height: 700px;
-  }
   .explore_btn span a img {
     height: 50px;
     padding: 50px;

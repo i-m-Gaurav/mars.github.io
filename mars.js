@@ -40,7 +40,6 @@ var index;
 var getCamera;
 var today;
 
-getViewportDimensions();
 
 //function for hamburger menu
 
@@ -807,25 +806,7 @@ function open_ham() {
 
 // }
 
-function getViewportDimensions() {
-  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-  let vh = window.innerHeight * 0.01;
-  let vw = window.innerWidth * 0.01;
-  // Then we set the value in the --vh custom property to the root of the document
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-  document.documentElement.style.setProperty("--vw", `${vw}px`);
 
-  // We listen to the resize event
-  window.addEventListener("resize", () => {
-    // We execute the same script as before
-    let vh = window.innerHeight * 0.01;
-    let vw = window.innerWidth * 0.01;
-    // console.log(vh);
-    // console.log(vw);
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-    document.documentElement.style.setProperty("--vw", `${vw}px`);
-  });
-}
 
 // when use press back button on phone or desktop browser this it will jump you to the prev page.
 

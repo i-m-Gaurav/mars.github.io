@@ -71,7 +71,7 @@
           >
         </div>
       </header>
-      <a href="#roverinfo">
+      <a href="#choose_rover_section">
         <div class="explore_btn">
           <span>
       
@@ -93,13 +93,16 @@
         </div>
         <div class="info">
           <h2>Curiosity</h2>
-          <span>Aug 6th, 2012</span>
+          <span>Launch Date : Aug 6th, 2012.</span>
+          <span>Landing on Mars : Aug 6th, 2012.</span>
+
           <p>
-            Part of NASA's Mars Science Laboratory mission, Curiosity is the
-            largest and most capable rover ever sent to Mars. It launched
-            November 26, 2011 and landed on Mars at 10:32 p.m. PDT on Aug. 5,
-            2012 (1:32 a.m. EDT on Aug. 6, 2012).
+            GOAL: Determine if Mars was ever able to support microbial life. as to study the climate and geology of Mars.
+            <br>
+            <br>
+             <a href="https://mars.nasa.gov/msl/home/">Read more.</a>
           </p>
+          
         </div>
       </div>
 
@@ -107,14 +110,16 @@
         <div class="img">
           <img src="image/opportunity.jpg" alt="curiosity" />
         </div>
-        <div class="info">
+        <div id="curiosity_info" class="info">
           <h2>Opportunity</h2>
-          <span>Jan 25th, 2004</span>
+          <span>Launch Date : July 7th, 2003.</span>
+          <span>Landing on Mars : Jan 25th, 2004.</span>
+
           <p>
-            Part of NASA's Mars Science Laboratory mission, Curiosity is the
-            largest and most capable rover ever sent to Mars. It launched
-            November 26, 2011 and landed on Mars at 10:32 p.m. PDT on Aug. 5,
-            2012 (1:32 a.m. EDT on Aug. 6, 2012).
+            GOAL: To determine if the potential for life exists on Mars (in particular, whether recoverable water may be found on Mars).
+            <br>
+            <br>
+           <a href="https://mars.nasa.gov/mer/mission/rover-status/#recent">Read more.</a>
           </p>
         </div>
       </div>
@@ -125,12 +130,14 @@
         </div>
         <div class="info">
           <h2>Spirit</h2>
-          <span>Aug 6th, 2012</span>
+          <span>Launch Date : June 10th, 2003.</span>
+          <span>Landing on Mars : Jan 4th, 2004.</span>
+
           <p>
-            Part of NASA's Mars Science Laboratory mission, Curiosity is the
-            largest and most capable rover ever sent to Mars. It launched
-            November 26, 2011 and landed on Mars at 10:32 p.m. PDT on Aug. 5,
-            2012 (1:32 a.m. EDT on Aug. 6, 2012).
+            GOAL:  To search for a range of rocks and soil types and then look for clues for past water activity on Mars.
+            <br>
+            <br>
+             <a href="https://mars.nasa.gov/mer/mission/rover-status/#recent">Read more.</a>
           </p>
         </div>
       </div>
@@ -171,7 +178,7 @@
         <img src="image/curiosity.jpg" alt="curiosity">
       </div> -->
     </section>
-    <div class="choose_rover_section">
+    <div id="choose_rover_section" class="choose_rover_section">
       <div class="chooseRover">
         <h1>Choose Rover</h1>
       </div>
@@ -330,6 +337,28 @@
      
      
    </section>
+
+       <!-- Camera angle section -->
+
+  <section class="camera_angles_section">
+    <div class="camera_angles ">
+      <div class="camera_heading" id="camera_heading">
+        <h3>Available camera angles</h3>
+      </div>
+      <div class="cameras">
+        <button class="rover_button " id="front" onclick="fcam()">Front</button>
+        <button class="rover_button" id="rear" onclick="rcam()">Rear</button>
+        <button class="rover_button" id="mast" onclick="mastcam()">MastCam</button>
+        <button class="rover_button" id="chem" onclick="chemCam()">ChemCam</button>
+        <button class="rover_button" id="mahli" onclick="mahliCam()">MahliCam</button>
+        <button class="rover_button" id="mardi" onclick="mardiCam()">MardiCam</button>
+        <button class="rover_button" id="nav" onclick="navcam()">NavCam</button>
+        <button class="rover_button" id="pan" onclick="panCam()">PanCam</button>
+        <button class="rover_button" id="minites" onclick="minitesCam()">MinitesCam</button>
+      </div>
+    </div>
+  </section>
+
    <section>
     <input
     type="date"
@@ -344,26 +373,8 @@
     </section>
     <section>
     
-    <!-- Camera angle section -->
 
-    <section class="camera_angles_section">
-      <div class="camera_angles ">
-        <div class="camera_heading" id="camera_heading">
-          <h3>Available camera angles</h3>
-        </div>
-        <div class="cameras">
-          <button class="rover_button " id="front" onclick="fcam()">Front</button>
-          <button class="rover_button" id="rear" onclick="rcam()">Rear</button>
-          <button class="rover_button" id="mast" onclick="mastcam()">MastCam</button>
-          <button class="rover_button" id="chem" onclick="chemCam()">ChemCam</button>
-          <button class="rover_button" id="mahli" onclick="mahliCam()">MahliCam</button>
-          <button class="rover_button" id="mardi" onclick="mardiCam()">MardiCam</button>
-          <button class="rover_button" id="nav" onclick="navcam()">NavCam</button>
-          <button class="rover_button" id="pan" onclick="panCam()">PanCam</button>
-          <button class="rover_button" id="minites" onclick="minitesCam()">MinitesCam</button>
-        </div>
-      </div>
-    </section>
+   
 
       <div id="toggle" style="visibility: hidden;">
       </div>
