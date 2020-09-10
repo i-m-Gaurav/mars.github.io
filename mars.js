@@ -192,7 +192,6 @@ function showPic() {
     img.src = data.photos[i].img_src;
     img.onload = function () {
       loadingImg("none");
-
       enableImage();
       enableBtn();
       document.getElementById("toggle").style.visibility = "hidden";
@@ -827,3 +826,5 @@ function resetSelectOptionAfterRoverChange() {
   document.getElementById("month").selectedIndex = "0";
   document.getElementById("year").selectedIndex = "0";
 }
+
+
