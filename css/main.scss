@@ -13,6 +13,10 @@ html {
 body {
   background-color: $color;
 }
+body.modal-open{
+  position: fixed;
+  width: 100%;
+}
 
 .Navigation {
   z-index: 1;
@@ -250,7 +254,7 @@ body {
 // Choose date section
 
 #choose_date_page {
-  height: 20vh;
+  height: 23vh;
   width: 100%;
   display: none;
 }
@@ -275,6 +279,7 @@ body {
     #day,
     #month,
     #year {
+      
       border: none;
       border-radius: 3px;
       width: 66px;
@@ -297,6 +302,52 @@ body {
       font-weight: 700;
     }
   }
+}
+
+//Date Range of Rovers
+.dateRangeOfRovers_heading
+{
+  display: flex;
+  justify-content: center;
+  margin-left: 13px;
+  color:white;
+  font-family: $font-family;
+  padding: 5px;
+  font-size: 14px;
+}
+.dateRangeOfRovers
+{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  margin-left: 13px;
+  color:rgb(255, 255, 255);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 12px;
+}
+.Curiosity_date_range{
+  display: none;
+}
+.Opportunity_date_range
+{
+  display: none;
+}
+.Spirit_date_range
+{
+  display: none;
+}
+
+.Curiosity_date_range_active
+{
+  display: inline;
+}
+.Opportunity_date_range_active
+{
+  display: inline;
+}
+.Spirit_date_range_active
+{
+  display: inline;
 }
 
 //Camera angle section

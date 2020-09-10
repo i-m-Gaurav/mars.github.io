@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <!-- <script src="https://use.fontawesome.com/77725000d7.js"></script> -->
+    <script src="https://use.fontawesome.com/77725000d7.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap"
       rel="stylesheet"
@@ -224,12 +224,20 @@
       <div class="choose_date_heading">
         <h2>Choose Date</h2>
         </div>
-
+        <div class="dateRangeOfRovers_heading">
+          <strong>Choose Under This Date Range</strong>
+        </div>
+        <div class="dateRangeOfRovers">
+          <strong id="Curiosity_date_range" class="Curiosity_date_range" >6th Aug, 2012 to Till now.</strong>
+          <strong id="Opportunity_date_range" class="Opportunity_date_range">Jan 25, 2004 to June 10, 2018</strong>
+          <strong id="Spirit_date_range" class="Spirit_date_range">Jan 4, 2004 to March 22, 2010</strong>
+        </div>
       <div class="choose_date_box">
+        
 
         <div class="choose_date_selector">
  
-         <select name="day" id="day">
+         <select name="day" id="day" required>
            <option value="0">Day</option>
            <option value="01">01</option>
            <option value="02">02</option>
@@ -263,7 +271,7 @@
            <option value="30">30</option>
            <option value="31">31</option>
          </select>
-         <select name="month" id="month">
+         <select name="month" id="month" required>
            <option value="0">Month</option>
            <option value="01">January</option>
            <option value="02">Fabruary</option>
@@ -278,26 +286,25 @@
            <option value="11">November</option>
            <option value="12">December</option>
          </select>
-         <select name="year" id="year" >
+         <select name="year"  id="year" required>
            <option value="0">Year</option>
-           <option value="2004">2004</option>
-           <option value="2005">2005</option>
-           <option value="2006">2006</option>
-           <option value="2007">2007</option>
-           <option value="2008">2008</option>
-           <option value="2009">2009</option>
-           <option value="2010">2010</option>
-           <option value="2011">2011</option>
-           <option value="2012">2012</option>
-           <option value="2013">2013</option>
-           <option value="2014">2014</option>
-           <option value="2015">2015</option>
-           <option value="2016">2016</option>
-           <option value="2017">2017</option>
-           <option value="2018">2018</option>
-           <option value="2019">2019</option>
-           <option value="2020">2020</option>
-           <option value="2021">2021</option>
+           <option id="y4" value="2004">2004</option>
+           <option id="y5" value="2005">2005</option>
+           <option id="y6" value="2006">2006</option>
+           <option id="y7" value="2007">2007</option>
+           <option id="y8" value="2008">2008</option>
+           <option id="y9" value="2009">2009</option>
+           <option id="y10" value="2010">2010</option>
+           <option id="y11" value="2011">2011</option>
+           <option id="y12" value="2012">2012</option>
+           <option id="y13" value="2013">2013</option>
+           <option id="y14" value="2014">2014</option>
+           <option id="y15" value="2015">2015</option>
+           <option id="y16" value="2016">2016</option>
+           <option id="y17" value="2017">2017</option>
+           <option id="y18" value="2018">2018</option>
+           <option id="y19" value="2019">2019</option>
+           <option id="y20" value="2020">2020</option>
            
          </select>
  
@@ -306,7 +313,7 @@
  
        <div id="search_btn">
  
-         <a href="#imageContainer" onclick="getDay(),allPhotos();">
+         <a href="#imageContainer" onclick="getDay(),allPhotos(),checkForDate();">
            <button >
              EXPLORE MARS
                </button>
@@ -360,7 +367,7 @@
       <div>
         <!-- <img src="" id="notFoundq" style="display: none;" alt="" /> -->
         <div id="notFound" class="notFound" style="display: none;">
-          <h1>No photos for this day, Try another date</h1>
+          <h1>No photos for this day, Try date from given Range</h1>
         </div>
         <img src="" id="pic" alt="" />
         <img src="" id="frontImg" />

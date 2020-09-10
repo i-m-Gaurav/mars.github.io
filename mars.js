@@ -97,7 +97,15 @@ function selectRover() {
 }
 
 function check_cur() {
+
+  
   var cur_rover = document.getElementById("curiosity_r");
+  var date_range = document.getElementById('Curiosity_date_range');
+  var date_range_Op = document.getElementById('Opportunity_date_range');
+  date_range_Op.classList.remove('Opportunity_date_range_active');
+  date_range.classList.add('Curiosity_date_range_active');
+  var date_range_spi = document.getElementById('Spirit_date_range');
+  date_range_spi.classList.remove('Spirit_date_range_active');
   resetSelectOptionAfterRoverChange();
   removeChild();
   cur_rover.checked = true;
@@ -105,7 +113,14 @@ function check_cur() {
   getDay();
 }
 function check_opp() {
+
   var opp_rover = document.getElementById("opportunity_r");
+  var date_range_Op = document.getElementById('Opportunity_date_range');
+  date_range_Op.classList.add('Opportunity_date_range_active');
+  var date_range = document.getElementById('Curiosity_date_range');
+  date_range.classList.remove('Curiosity_date_range_active');
+  var date_range_spi = document.getElementById('Spirit_date_range');
+  date_range_spi.classList.remove('Spirit_date_range_active');
   resetSelectOptionAfterRoverChange();
   removeChild();
   opp_rover.checked = true;
@@ -113,6 +128,12 @@ function check_opp() {
   getDay();
 }
 function check_spi() {
+  var date_range_Op = document.getElementById('Opportunity_date_range');
+  date_range_Op.classList.remove('Opportunity_date_range_active');
+  var date_range = document.getElementById('Curiosity_date_range');
+  date_range.classList.remove('Curiosity_date_range_active');
+  var date_range_spi = document.getElementById('Spirit_date_range');
+  date_range_spi.classList.add('Spirit_date_range_active');
   var spi_rover = document.getElementById("spirit_r");
   resetSelectOptionAfterRoverChange();
   removeChild();
@@ -134,12 +155,15 @@ function sendHttpRequest(method, update_url, mode) {
         if (req.status == 404) {
           console.log("file not found");
         }
+        
       }
     };
+
     // chooseRover();
     req.open(method, update_url, mode);
     req.send();
   });
+  
 }
 //it will allow to set loading image as per requirement.
 function loadingImg(mode) {
@@ -742,7 +766,7 @@ function getDateSelect() {
 function open_ham() {
   
 
-
+// preventBodyScroll();
  
   // console.log(scrollY);
   document.body.style.overflowY = "hidden";
@@ -750,7 +774,12 @@ function open_ham() {
   const ham_menu = document.querySelector("menu_btn");
   const ham = document.querySelector(".ham_menu");
   ham.classList.toggle("ham-active");
-  ham_menu.classList.remove("ham-deactive");
+  try {
+    ham_menu.classList.remove("ham-deactive");
+  } catch (error) {
+    console.log("👌");
+  }
+  
 
   
 
@@ -828,3 +857,26 @@ function resetSelectOptionAfterRoverChange() {
 }
 
 
+function checkForDate()
+{
+  var day = document.getElementById("day");
+  var mon = document.getElementById("month");
+  var year = document.getElementById("year");
+  if(day.value == "0")
+  {
+    alert("Please Enter a valid date!");
+  }
+  else if(mon.value == "0")
+  {
+    alert("Please Enter a valid date!");
+
+  }
+  else if(year.value == "0")
+  {
+    alert("Please Enter a valid date!");
+
+  }
+
+  
+
+}
