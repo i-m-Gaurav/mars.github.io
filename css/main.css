@@ -668,7 +668,7 @@ body.modal-open {
   cursor: pointer;
   border-radius: 50%;
   border: none;
-  background-color: rgba(0, 0, 0, 0.596);
+  background-color: rgba(0, 0, 0, 0);
   height: 45px;
   width: 45px;
   display: -webkit-box;
