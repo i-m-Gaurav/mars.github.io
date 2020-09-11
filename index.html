@@ -36,7 +36,7 @@
       </div>
 
       <div class="page_links">
-        <span><a href="#">Home</a> </span>
+        <span><a href="#">HOME</a> </span>
         <span><a href="#">EPIC</a> </span>
         <span><a href="#">EXPLORE MARS</a> </span>
         <span><a href="#">IMAGE & VIDEO</a> </span>
@@ -65,10 +65,7 @@
           <!-- <h1>MARS ROVER IMAGE GALLERY</h1> -->
         </div>
         <div class="subtitle">
-          <span
-            >Image data gathered by NASA's Curiosity, Opportunity, and Spirit
-            rovers on Mars</span
-          >
+          <p>Image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars</p>
         </div>
       </header>
       <a href="#choose_rover_section">
@@ -142,41 +139,58 @@
         </div>
       </div>
 
-      <!-- <div class="rover1">
-        <div class="text">
-          <p>Hello</p>
-          <p>Part of NASA's Mars Science Laboratory mission, 
-            Curiosity is the largest and most capable rover ever sent to Mars.
-            It launched November 26, 2011
-            and landed on Mars at 10:32 p.m. PDT on
-            Aug. 5, 2012 (1:32 a.m. EDT on Aug. 6, 2012).</p>
+      
+    </section>
+
+    <section id="rover_section">
+      <section id="rovers_intro_heading">
+        <h1>Mars Exploration Rovers</h1>
+      </section>
+      <div id="curiosity_intro">
+        <div class="text mars_rovers_header">
+          <h2>Curiosity</h2>
+          <p>
+            Part of NASA's Mars Science Laboratory mission, Curiosity is the
+            largest and most capable rover ever sent to Mars. It launched
+            November 26, 2011 and landed on Mars at 10:32 p.m. PDT on Aug. 5,
+            2012 (1:32 a.m. EDT on Aug. 6, 2012).
+          </p>
         </div>
-        <div class="rover_image">
-          <img src="image/curiosity.jpg" alt="curiosity">
+        <div class="rover rover_info_image">
+          <img src="image/curiosity.jpg" alt="" />
         </div>
       </div>
-      <div class="text">
-        <p>Hello</p>
-        <p>Part of NASA's Mars Science Laboratory mission, 
-          Curiosity is the largest and most capable rover ever sent to Mars.
-          It launched November 26, 2011
-          and landed on Mars at 10:32 p.m. PDT on
-          Aug. 5, 2012 (1:32 a.m. EDT on Aug. 6, 2012).</p>
+      <div id="opportunity_intro">
+        <div class="text mars_rovers_header">
+          <h2>Opportunity</h2>
+          <p>
+            Opportunity, also known as MER-B (Mars Exploration Rover – B) or
+            MER-1, and nicknamed "Oppy",[8] is a robotic rover that was active
+            on Mars from 2004 until the middle of 2018.[2] Launched on July 7,
+            2003, as part of NASA's Mars Exploration Rover program, it landed in
+            Meridiani Planum on January 25, 2004, three weeks after its twin
+            Spirit (MER-A) touched down on the other side of the planet.
+          </p>
+        </div>
+        <div class="rover rover_info_image">
+          <img src="image/opportunity.jpg" alt="" />
+        </div>
       </div>
-      <div class="rover_image">
-        <img src="image/curiosity.jpg" alt="curiosity">
+      <div id="spirit_intro">
+        <div class="text mars_rovers_header">
+          <h2>Spirit</h2>
+          <p>
+            Spirit, also known as MER-A (Mars Exploration Rover – A) or MER-2,
+            is a robotic rover on Mars, active from 2004 to 2010.[2] It was one
+            of two rovers of NASA's Mars Exploration Rover Mission. It landed
+            successfully within the impact crater Gusev on Mars at 04:35 Ground
+            UTC on January 4, 2004.
+          </p>
+        </div>
+        <div class="rover rover_info_image">
+          <img src="image/spirit.jpg" alt="" />
+        </div>
       </div>
-      <div class="text">
-        <p>Hello</p>
-        <p>Part of NASA's Mars Science Laboratory mission, 
-          Curiosity is the largest and most capable rover ever sent to Mars.
-          It launched November 26, 2011
-          and landed on Mars at 10:32 p.m. PDT on
-          Aug. 5, 2012 (1:32 a.m. EDT on Aug. 6, 2012).</p>
-      </div>
-      <div class="rover_image">
-        <img src="image/curiosity.jpg" alt="curiosity">
-      </div> -->
     </section>
     <div id="choose_rover_section" class="choose_rover_section">
       <div class="chooseRover">
@@ -283,49 +297,49 @@
          </select>
          <select name="month" id="month" required>
            <option value="0">Month</option>
-           <option value="01">January</option>
-           <option value="02">Fabruary</option>
-           <option value="03">March</option>
-           <option value="04">April</option>
+           <option value="01">Jan</option>
+           <option value="02">Fab</option>
+           <option value="03">Mar</option>
+           <option value="04">Apr</option>
            <option value="05">May</option>
-           <option value="06">June</option>
-           <option value="07">July</option>
-           <option value="08">August</option>
-           <option value="09">September</option>
-           <option value="10">October</option>
-           <option value="11">November</option>
-           <option value="12">December</option>
+           <option value="06">Jun</option>
+           <option value="07">Jul</option>
+           <option value="08">Aug</option>
+           <option value="09">Sep</option>
+           <option value="10">Oct</option>
+           <option value="11">Nov</option>
+           <option value="12">Dec</option>
          </select>
          <select name="year"  id="year" required>
            <option value="0">Year</option>
-           <option id="y4" value="2004">2004</option>
-           <option id="y5" value="2005">2005</option>
-           <option id="y6" value="2006">2006</option>
-           <option id="y7" value="2007">2007</option>
-           <option id="y8" value="2008">2008</option>
-           <option id="y9" value="2009">2009</option>
-           <option id="y10" value="2010">2010</option>
-           <option id="y11" value="2011">2011</option>
-           <option id="y12" value="2012">2012</option>
-           <option id="y13" value="2013">2013</option>
-           <option id="y14" value="2014">2014</option>
-           <option id="y15" value="2015">2015</option>
-           <option id="y16" value="2016">2016</option>
-           <option id="y17" value="2017">2017</option>
-           <option id="y18" value="2018">2018</option>
-           <option id="y19" value="2019">2019</option>
-           <option id="y20" value="2020">2020</option>
+           <option  value="2004">2004</option>
+           <option  value="2005">2005</option>
+           <option  value="2006">2006</option>
+           <option  value="2007">2007</option>
+           <option  value="2008">2008</option>
+           <option  value="2009">2009</option>
+           <option  value="2010">2010</option>
+           <option  value="2011">2011</option>
+           <option  value="2012">2012</option>
+           <option  value="2013">2013</option>
+           <option  value="2014">2014</option>
+           <option  value="2015">2015</option>
+           <option  value="2016">2016</option>
+           <option  value="2017">2017</option>
+           <option  value="2018">2018</option>
+           <option  value="2019">2019</option>
+           <option  value="2020">2020</option>
            
          </select>
  
        </div>
  
  
-       <div id="search_btn">
+       <div id="search_btn" class="search_btn">
  
          <a href="#imageContainer" onclick="getDay(),allPhotos(),checkForDate();">
            <button >
-             EXPLORE MARS
+             EXPLORE
                </button>
          </a>
          
@@ -348,13 +362,13 @@
       <div class="cameras">
         <button class="rover_button " id="front" onclick="fcam()">Front</button>
         <button class="rover_button" id="rear" onclick="rcam()">Rear</button>
-        <button class="rover_button" id="mast" onclick="mastcam()">MastCam</button>
-        <button class="rover_button" id="chem" onclick="chemCam()">ChemCam</button>
-        <button class="rover_button" id="mahli" onclick="mahliCam()">MahliCam</button>
-        <button class="rover_button" id="mardi" onclick="mardiCam()">MardiCam</button>
-        <button class="rover_button" id="nav" onclick="navcam()">NavCam</button>
-        <button class="rover_button" id="pan" onclick="panCam()">PanCam</button>
-        <button class="rover_button" id="minites" onclick="minitesCam()">MinitesCam</button>
+        <button class="rover_button" id="mast" onclick="mastcam()">Mast</button>
+        <button class="rover_button" id="chem" onclick="chemCam()">Chem</button>
+        <button class="rover_button" id="mahli" onclick="mahliCam()">Mahli</button>
+        <button class="rover_button" id="mardi" onclick="mardiCam()">Mardi</button>
+        <button class="rover_button" id="nav" onclick="navcam()">Nav</button>
+        <button class="rover_button" id="pan" onclick="panCam()">Pan</button>
+        <button class="rover_button" id="minites" onclick="minitesCam()">Minites</button>
       </div>
     </div>
   </section>
@@ -397,13 +411,11 @@
             onclick="prevPic();"
             class="button"
           >
-            <!-- <svg id="prev" viewBox="1.734 6.746 41.703 64.585">
-              <path
-                id="prevIcon"
-                d="M 3.154016494750977 35.60912704467773 L 30.59421348571777 8.16893196105957 C 32.49081420898438 6.272332191467285 35.55765914916992 6.272332191467285 37.43408584594727 8.16893196105957 L 41.99399948120117 12.72884750366211 C 43.89060974121094 14.62544918060303 43.89060974121094 17.69229698181152 41.99399948120117 19.56871795654297 L 22.56391906738281 39.03915023803711 L 42.0141716003418 58.48940658569336 C 43.91078186035156 60.38601684570312 43.91078186035156 63.45285797119141 42.0141716003418 65.32929229736328 L 37.45426559448242 69.90937042236328 C 35.55765914916992 71.80597686767578 32.49081420898438 71.80597686767578 30.61438941955566 69.90937042236328 L 3.174195051193237 42.46917724609375 C 1.257416486740112 40.57257080078125 1.257416486740112 37.50572967529297 3.15401816368103 35.60912704467773 Z"
-              ></path>
-            </svg> -->
-            <i class="fa fa-angle-left" id="prev"></i>
+           
+            <span>
+              <img src="svg/prev.svg" alt="" id="prev">
+            </span>
+            <!-- <i class="fa fa-angle-left" id="prev"></i> -->
             <!-- <i class="material-icons" id="prev">
               keyboard_arrow_left
             </i> -->
@@ -414,21 +426,15 @@
             onclick="nextPic();"
             class="button"
           >
-          <i class="fa fa-angle-right" id="next"></i>
-          <!-- <i class="material-icons" id="next">
-            keyboard_arrow_right
-          </i> -->
-            <!-- <svg id="next" viewBox="1.74 6.746 41.7 64.59">
-              <path
-                id="nextIcon"
-                d="M 42.01969146728516 42.47175598144531 L 14.56789398193359 69.91393280029297 C 12.67049217224121 71.8106689453125 9.602348327636719 71.8106689453125 7.7251296043396 69.91393280029297 L 3.163286924362183 65.35369110107422 C 1.265883207321167 63.45695495605469 1.265883207321167 60.3898811340332 3.163286924362183 58.51332092285156 L 22.62176704406738 39.0616569519043 L 3.163286924362183 19.61000442504883 C 1.265883207321167 17.71326446533203 1.265883207321167 14.64619541168213 3.163286924362183 12.76963710784912 L 7.704946041107178 8.169036865234375 C 9.602350234985352 6.272300720214844 12.67049217224121 6.272300720214844 14.5477123260498 8.169036865234375 L 41.99950790405273 35.61120986938477 C 43.91709899902344 37.50795745849609 43.91709899902344 40.57501602172852 42.01969528198242 42.47175598144531 Z"
-              ></path>
-            </svg> -->
+          <span> <img src="svg/next.svg" alt="" id="next"></span>
+          <!-- <i class="fa fa-angle-right" id="next"></i> -->
+          
           </button>
         </div>
         <div id="closeDiv">
           <button id="close" onmouseover="closeButton();">
-            <i class="material-icons  close">clear</i>
+            <span><img src="svg/clear.svg" alt=""></span>
+            <!-- <i class="material-icons  close">clear</i> -->
           </button>
           <!-- <button id="close" onmouseover="closeButton();"> -->
         </div>

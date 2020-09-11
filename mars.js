@@ -725,22 +725,7 @@ function goToTopOfThePage() {
   document.documentElement.scrollTop = 0;
 }
 
-// function ScrollBlock()
-// {
-//   document.body.style.overflow = "hidden";
-// }
-// function ScrollEnable()
-// {
-//   document.body.style.overflow = "hidden";
-// }
 
-// function chooseDateSection() {
-//   var dateBox = document.createElement("div");
-//   dateBox.classList.add("dateBox");
-//   const date = document.getElementById("textDate");
-//   var element = document.querySelector(".rover_container");
-//   element.appendChild(date);
-// }
 
 /**
  * *This function will make you jump to the page where you can choose the rover of your own choice;
@@ -782,29 +767,9 @@ function open_ham() {
 
   
 
-  // var ham = document.querySelector(".ham_menu");
-
-  // if (ham.style.display === "none") {
-  //   ham.style.display = "block";
-  // } else {
-  //   // ham.classList.add('js-is-hidden');
-  //   ham.style.display = "none";
-  // }
+ 
 }
 
-// window.onload = function{
-//   const hidediv = document.getElementById('ham_menu');
-//   document.onclick = function(div){
-//     if(div.target.id !== 'ham_menu')
-//     {
-//       hidediv.style.display ="none";
-//     }
-//   };
-// }
-
-// const app = () =>{
-
-// }
 
 
 

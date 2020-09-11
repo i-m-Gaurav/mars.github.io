@@ -78,6 +78,10 @@ body.modal-open {
   display: none;
 }
 
+.explore_btn span img {
+  height: 75px;
+}
+
 .ham_menu_links {
   margin-top: 20px;
 }
@@ -168,8 +172,7 @@ body.modal-open {
 
 .main_body {
   background-color: white;
-  height: 670px;
-  max-width: 100%;
+  height: 763px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,7 +229,6 @@ body.modal-open {
 }
 
 .roverinfo {
-  background-color: #5a2017;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,9 +242,16 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .roverTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: montserrat;
   color: white;
 }
@@ -391,7 +400,7 @@ body.modal-open {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #e6e6e6;
+  color: white;
   font-family: montserrat;
   font-size: 1.1rem;
 }
@@ -404,9 +413,11 @@ body.modal-open {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 8px;
+  padding-left: 8px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 100px;
 }
 
 .choose_date_page .choose_date_box #day,
@@ -433,6 +444,11 @@ body.modal-open {
   color: #5a2017;
   background-color: #fff;
   font-weight: 700;
+  font-size: 12px;
+}
+
+.choose_date_page #search_btn {
+  margin-left: 8px;
 }
 
 .dateRangeOfRovers_heading {
@@ -495,16 +511,17 @@ body.modal-open {
 }
 
 .camera_angles_section {
-  width: 100%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 4px;
 }
 
 .camera_angles_section .camera_angles {
@@ -515,18 +532,17 @@ body.modal-open {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 95%;
   border-radius: 5px;
 }
 
 .camera_angles_section .camera_angles .camera_heading {
+  margin: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  padding-left: 8px;
 }
 
 .camera_angles_section .camera_angles .camera_heading h3 {
@@ -548,13 +564,12 @@ body.modal-open {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  margin-left: 4px;
 }
 
 .camera_angles_section .camera_angles .cameras .rover_button {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  height: 27px;
+  height: 30px;
   width: 77px;
   border: none;
   outline: none;
@@ -633,22 +648,15 @@ body.modal-open {
   position: absolute;
 }
 
-#closeDiv:hover {
-  border-color: #fff;
-  -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
-}
-
 #close {
   background-color: transparent;
-  height: 52px;
-  width: 52px;
+  height: 42px;
+  width: 42px;
   border: 2px solid transparent;
 }
 
 #close .close {
   color: white;
-  font-size: 32px;
 }
 
 .button-container {
@@ -686,6 +694,8 @@ body.modal-open {
 .button #prev {
   color: white;
   font-size: 32px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
   outline: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -942,7 +952,95 @@ button:focus {
 
 @media all and (min-width: 768px) {
   .main_body {
-    height: 763px;
+    height: 768px;
+  }
+  .main_body .heading .title p {
+    color: #5a2017;
+    font-size: 3.3rem;
+  }
+  .main_body .heading .subtitle p {
+    font-size: 1.4rem;
+  }
+  .roverinfo {
+    display: none;
+  }
+  #rover_section #rovers_intro_heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  #rover_section #curiosity_intro,
+  #rover_section #opportunity_intro,
+  #rover_section #spirit_intro {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #rover_section #opportunity_intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  #rover_section #choose_rover_section {
+    padding-top: 160px;
+    background-color: transparent;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #rover_section .mars_rovers_header {
+    color: white;
+    font-size: 1rem;
+    padding: 16px;
+    font-family: montserrat;
+    font-weight: 350;
+    width: 580px;
+  }
+  #rover_section .mars_rovers_header h2 {
+    color: white;
+    font-size: 2rem;
+  }
+  #rover_section .rover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    margin: 25px;
+  }
+  #rover_section .rover img {
+    height: 400px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
   .Navigation .logo .menu {
     display: none;
@@ -982,44 +1080,252 @@ button:focus {
     padding: 8px;
     color: white;
     font-family: montserrat;
-    font-size: 20px;
-  }
-}
-
-@media all and (min-width: 1025px) {
-  .explore_btn span a img {
-    height: 50px;
-    padding: 50px;
-  }
-  .title {
     font-size: 19px;
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
   }
-  .subtitle {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+  .choose_rover_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-}
-
-@media all and (min-width: 1367px) {
-  .main_body {
-    height: 1100px;
+  .choose_rover_section .chooseRover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: white;
+    font-family: montserrat;
+    font-size: 0.8rem;
   }
-  .explore_btn span a img {
-    height: 80px;
+  .choose_rover_section .select_rover_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .choose_rover_section .select_rover_container .select_rover {
+    background-color: white;
+  }
+  .choose_rover_section .select_rover_container .select_rover {
+    margin: 8px;
+    color: white;
+    border-radius: 6px;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_img {
+    height: 205px;
+    width: 220px;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_img img {
+    border-radius: 5px 5px 0 0;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_name {
+    height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_name a {
+    text-decoration: none;
+    color: #5a2017;
+    font-family: montserrat;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .choose_rover_section .select_rover_container img {
+    width: 100%;
+    height: 100%;
+  }
+  .choose_date_page .choose_date_box {
+    padding-left: 42px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    height: 100px;
+  }
+  .choose_date_page .choose_date_box .choose_date_selector {
+    width: 216px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .choose_date_page .choose_date_box #search_btn {
+    margin-left: 10px;
+  }
+  .camera_angles_section {
+    padding-left: 38px;
+  }
+  .camera_angles_section .camera_angles .camera_heading {
+    margin: 5px;
   }
 }
 
 @media all and (max-width: 768px) {
-  .explore_btn a img {
-    height: 70px;
+  .main_body .heading .title p {
+    font-family: montserrat;
+    font-size: 2.5rem;
   }
-  .subtitle {
+  .main_body .heading .subtitle {
     display: none;
   }
-  .title p {
-    font-size: 40px !important;
+  .roverinfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #rover_section {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .mars_rovers_header {
+    color: white;
+    font-size: 1rem;
+    padding: 16px;
+    font-family: montserrat;
+    font-weight: 350;
+    width: 580px;
+  }
+  .mars_rovers_header h2 {
+    color: white;
+    font-size: 2rem;
+  }
+  .mars_rovers_header p {
+    font-size: 1.3rem;
+  }
+  .choose_rover_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .choose_rover_section .chooseRover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: white;
+    font-family: montserrat;
+    font-size: 18px;
+    height: 140px;
+  }
+  .choose_rover_section .select_rover_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .choose_rover_section .select_rover_container .select_rover {
+    background-color: white;
+  }
+  .choose_rover_section .select_rover_container .select_rover {
+    margin: 8px;
+    color: white;
+    border-radius: 6px;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_img {
+    height: 405px;
+    width: 320px;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_img img {
+    border-radius: 5px 5px 0 0;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_name {
+    height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_name a {
+    text-decoration: none;
+    color: #5a2017;
+    font-family: montserrat;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .choose_rover_section .select_rover_container img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media all and (min-width: 1900px) {
+  .main_body {
+    height: 1000px;
+  }
+  .mars_rovers_header {
+    color: white;
+    font-size: 1rem;
+    padding: 16px;
+    font-family: montserrat;
+    font-weight: 350;
+    width: 580px;
+  }
+  .mars_rovers_header h2 {
+    color: white;
+    font-size: 2rem;
+  }
+  .mars_rovers_header p {
+    font-size: 1.3rem;
+  }
+}
+
+@media all and (max-width: 280px) {
+  .choose_rover_section .select_rover_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .choose_rover_section .select_rover_container .select_rover {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    width: 80px;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_img {
+    height: 90px;
+    width: 80px;
+  }
+  .choose_rover_section .select_rover_container .select_rover .rover_name a {
+    font-size: 8px;
   }
 }
 /*# sourceMappingURL=main.css.map */
