@@ -284,7 +284,8 @@ body.modal-open {
     flex-direction: row;
     // justify-content: space-around;
     // padding: 8px;
-    padding-left: 8px;
+    padding-top: 10px;
+    // padding-left: 8px;
     justify-content: center;
     height: 100px;
     #day,
@@ -950,7 +951,8 @@ button:focus {
   // choose Date select boxex
   .choose_date_page {
     .choose_date_box {
-      padding-left: 42px;
+      padding-top: 10px;
+      // padding-left: 42px;
 
       justify-content: center;
       height: 100px;
