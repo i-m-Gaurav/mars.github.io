@@ -414,9 +414,9 @@ body.modal-open {
       -ms-flex-direction: row;
           flex-direction: row;
   padding-left: 8px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100px;
 }
 
@@ -1152,9 +1152,9 @@ button:focus {
   }
   .choose_date_page .choose_date_box {
     padding-left: 42px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100px;
   }
   .choose_date_page .choose_date_box .choose_date_selector {

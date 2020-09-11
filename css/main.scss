@@ -285,7 +285,7 @@ body.modal-open {
     // justify-content: space-around;
     // padding: 8px;
     padding-left: 8px;
-    justify-content: start;
+    justify-content: center;
     height: 100px;
     #day,
     #month,
@@ -952,7 +952,7 @@ button:focus {
     .choose_date_box {
       padding-left: 42px;
 
-      justify-content: start;
+      justify-content: center;
       height: 100px;
       .choose_date_selector {
         width: 216px;
