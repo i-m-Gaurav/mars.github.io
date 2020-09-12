@@ -420,9 +420,7 @@ body.modal-open {
   height: 100px;
 }
 
-.choose_date_page .choose_date_box #day,
-.choose_date_page .choose_date_box #month,
-.choose_date_page .choose_date_box #year {
+.choose_date_page .choose_date_box #day, .choose_date_page .choose_date_box #month, .choose_date_page .choose_date_box #year {
   border: none;
   border-radius: 3px;
   width: 66px;
@@ -475,7 +473,7 @@ body.modal-open {
           justify-content: center;
   margin-left: 13px;
   color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 12px;
 }
 
@@ -690,8 +688,7 @@ body.modal-open {
           align-items: center;
 }
 
-.button #next,
-.button #prev {
+.button #next, .button #prev {
   color: white;
   font-size: 32px;
   -webkit-transform: scale(0.5);
@@ -725,8 +722,7 @@ button:focus {
 }
 
 .footer_heading h3 {
-  color: #ffffff9d;
-  color: #b4b4b4;
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -950,6 +946,14 @@ button:focus {
           filter: drop-shadow(2px 3px 2px #1a1a1a);
 }
 
+#loading_bar {
+  display: none;
+}
+
+.loading_bar {
+  display: inline;
+}
+
 @media all and (min-width: 768px) {
   .main_body {
     height: 568px;
@@ -960,6 +964,12 @@ button:focus {
   }
   .main_body .heading .subtitle p {
     font-size: 1.4rem;
+  }
+  .explore_btn:hover {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
   }
   .roverinfo {
     display: none;
@@ -1286,6 +1296,12 @@ button:focus {
   .main_body {
     height: 1000px;
   }
+  .explore_btn:hover {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
   .mars_rovers_header {
     color: white;
     font-size: 1rem;
@@ -1327,7 +1343,44 @@ button:focus {
   .choose_rover_section .select_rover_container .select_rover .rover_name a {
     font-size: 8px;
   }
-  .rover_card1 {
+  .choose_date_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100px;
+  }
+  .choose_date_box #day, .choose_date_box #month, .choose_date_box #year {
+    border: none;
+    border-radius: 3px;
+    width: 66px;
+    height: 30px;
+    outline: none;
+    overflow-y: 100px;
+    background-color: #fff;
+    color: #5a2017;
+    font-family: montserrat;
+    font-weight: 700;
+  }
+  .choose_date_box button {
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-family: montserrat;
+    color: #5a2017;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .choose_date_box .rover_card1 {
     background-color: #fff;
     border-radius: 7px;
     width: 95%;
@@ -1339,16 +1392,16 @@ button:focus {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .rover_card1 .img {
+  .choose_date_box .rover_card1 .img {
     border-radius: 5px 5px 0px 0px;
     height: 200px;
     width: 100%;
     overflow: hidden;
   }
-  .rover_card1 .img img {
+  .choose_date_box .rover_card1 .img img {
     width: 100%;
   }
-  .rover_card1 .info {
+  .choose_date_box .rover_card1 .info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1359,7 +1412,7 @@ button:focus {
     height: 280px;
     font-family: montserrat;
   }
-  .rover_card1 .info span {
+  .choose_date_box .rover_card1 .info span {
     opacity: 0.7;
   }
 }

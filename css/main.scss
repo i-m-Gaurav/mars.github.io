@@ -52,8 +52,9 @@ body.modal-open {
 }
 //intro button svg
 .explore_btn span img {
-	height: 75px;
+  height: 75px;
 }
+
 .ham_menu_links {
 	margin-top: 20px;
 }
@@ -530,8 +531,7 @@ button:focus {
 }
 .footer_heading {
 	h3 {
-		color: #ffffff9d;
-		color: #b4b4b4;
+		color: white;
 		font-family: "Montserrat", sans-serif;
 		font-weight: 500;
 		font-size: 12px;
@@ -681,6 +681,13 @@ button:focus {
 	filter: drop-shadow(2px 3px 2px rgb(26, 26, 26));
 }
 // OLD CSS CODE
+#loading_bar{
+  display: none;
+}
+.loading_bar{
+display: inline;
+}
+
 //media query codes
 @media all and (min-width: 768px) {
 	.main_body {
@@ -696,9 +703,13 @@ button:focus {
 				font-size: 1.4rem;
 			}
 		}
-	}
-	// height: 768px;
-	// clip-path: polygon(0 0, 100% 0, 100% 77%, 0 94%);
+  }
+  
+  //intro button
+  .explore_btn:hover{
+    transform: translateY(10%);
+    transition: all 0.5s ease-out;
+  }
 	//Desktop roverinfo section
 	.roverinfo {
 		display: none;
@@ -960,7 +971,14 @@ button:focus {
 @media all and (min-width: 1900px) {
 	.main_body {
 		height: 1000px;
-	}
+  }
+  
+  // intro button
+  .explore_btn:hover{
+    transform: translateY(10%);
+    transition: all 0.5s ease-out;
+  }
+
 	.mars_rovers_header {
 		color: white;
 		font-size: 1rem;
@@ -1057,5 +1075,5 @@ button:focus {
 				opacity: 0.7;
 			}
 		}
-	}
-	
+  }
+}
