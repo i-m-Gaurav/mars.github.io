@@ -172,7 +172,7 @@ body.modal-open {
 
 .main_body {
   background-color: white;
-  height: 763px;
+  height: calc(var(--vh, 1vh) * 100);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -952,7 +952,7 @@ button:focus {
 
 @media all and (min-width: 768px) {
   .main_body {
-    height: 768px;
+    height: 568px;
   }
   .main_body .heading .title p {
     color: #5a2017;
@@ -1326,6 +1326,41 @@ button:focus {
   }
   .choose_rover_section .select_rover_container .select_rover .rover_name a {
     font-size: 8px;
+  }
+  .rover_card1 {
+    background-color: #fff;
+    border-radius: 7px;
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .rover_card1 .img {
+    border-radius: 5px 5px 0px 0px;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .rover_card1 .img img {
+    width: 100%;
+  }
+  .rover_card1 .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 280px;
+    font-family: montserrat;
+  }
+  .rover_card1 .info span {
+    opacity: 0.7;
   }
 }
 /*# sourceMappingURL=main.css.map */
