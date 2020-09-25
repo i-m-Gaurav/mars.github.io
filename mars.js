@@ -40,7 +40,6 @@ var index;
 var getCamera;
 var today;
 
-
 getViewportDimensions();
 
 //function for hamburger menu
@@ -52,7 +51,7 @@ window.onclick = function (e) {
   if (e.target !== hide) {
     ham_menu.classList.add("ham-deactive");
     ham_menu.classList.remove("ham-active");
-    document.body.style.overflowY = "scroll"
+    document.body.style.overflowY = "scroll";
     // document.body.style.position = "relative";
     if (e.target == ham_menu) {
       ham_menu.classList.add("ham-active");
@@ -62,8 +61,6 @@ window.onclick = function (e) {
     ham_menu.classList.remove("ham-deactive");
   }
 };
-
-
 
 // it will fetch current day using select option
 
@@ -98,15 +95,13 @@ function selectRover() {
 }
 
 function check_cur() {
-
-  
   var cur_rover = document.getElementById("curiosity_r");
-  var date_range = document.getElementById('Curiosity_date_range');
-  var date_range_Op = document.getElementById('Opportunity_date_range');
-  date_range_Op.classList.remove('Opportunity_date_range_active');
-  date_range.classList.add('Curiosity_date_range_active');
-  var date_range_spi = document.getElementById('Spirit_date_range');
-  date_range_spi.classList.remove('Spirit_date_range_active');
+  var date_range = document.getElementById("Curiosity_date_range");
+  var date_range_Op = document.getElementById("Opportunity_date_range");
+  date_range_Op.classList.remove("Opportunity_date_range_active");
+  date_range.classList.add("Curiosity_date_range_active");
+  var date_range_spi = document.getElementById("Spirit_date_range");
+  date_range_spi.classList.remove("Spirit_date_range_active");
   resetSelectOptionAfterRoverChange();
   removeChild();
   cur_rover.checked = true;
@@ -114,14 +109,13 @@ function check_cur() {
   getDay();
 }
 function check_opp() {
-
   var opp_rover = document.getElementById("opportunity_r");
-  var date_range_Op = document.getElementById('Opportunity_date_range');
-  date_range_Op.classList.add('Opportunity_date_range_active');
-  var date_range = document.getElementById('Curiosity_date_range');
-  date_range.classList.remove('Curiosity_date_range_active');
-  var date_range_spi = document.getElementById('Spirit_date_range');
-  date_range_spi.classList.remove('Spirit_date_range_active');
+  var date_range_Op = document.getElementById("Opportunity_date_range");
+  date_range_Op.classList.add("Opportunity_date_range_active");
+  var date_range = document.getElementById("Curiosity_date_range");
+  date_range.classList.remove("Curiosity_date_range_active");
+  var date_range_spi = document.getElementById("Spirit_date_range");
+  date_range_spi.classList.remove("Spirit_date_range_active");
   resetSelectOptionAfterRoverChange();
   removeChild();
   opp_rover.checked = true;
@@ -129,12 +123,12 @@ function check_opp() {
   getDay();
 }
 function check_spi() {
-  var date_range_Op = document.getElementById('Opportunity_date_range');
-  date_range_Op.classList.remove('Opportunity_date_range_active');
-  var date_range = document.getElementById('Curiosity_date_range');
-  date_range.classList.remove('Curiosity_date_range_active');
-  var date_range_spi = document.getElementById('Spirit_date_range');
-  date_range_spi.classList.add('Spirit_date_range_active');
+  var date_range_Op = document.getElementById("Opportunity_date_range");
+  date_range_Op.classList.remove("Opportunity_date_range_active");
+  var date_range = document.getElementById("Curiosity_date_range");
+  date_range.classList.remove("Curiosity_date_range_active");
+  var date_range_spi = document.getElementById("Spirit_date_range");
+  date_range_spi.classList.add("Spirit_date_range_active");
   var spi_rover = document.getElementById("spirit_r");
   resetSelectOptionAfterRoverChange();
   removeChild();
@@ -156,7 +150,6 @@ function sendHttpRequest(method, update_url, mode) {
         if (req.status == 404) {
           console.log("file not found");
         }
-        
       }
     };
 
@@ -164,7 +157,6 @@ function sendHttpRequest(method, update_url, mode) {
     req.open(method, update_url, mode);
     req.send();
   });
-  
 }
 //it will allow to set loading image as per requirement.
 function loadingImg(mode) {
@@ -194,12 +186,15 @@ function disableImage() {
   document.getElementById("pic").style.display = "none";
 }
 // when image is successfully parsed from the server then, showpic() will allow to show that pictures on the webpage.
+
 function showPic() {
   var i = 0;
   console.log(data);
   imageContainer = document.getElementById("imageContainer");
   while (i < data.photos.length) {
     ImgBox = document.createElement("div");
+
+    //animation stuff
 
     //TODO
 
@@ -208,15 +203,18 @@ function showPic() {
     ImgBox.appendChild(anchorForEachImage);
 
     img = document.createElement("img");
+
     img.className = "cardImage";
     ImgBox.id = "card";
     ImgBox.classList.add("card");
+
     anchorForEachImage.appendChild(img);
     // ImgBox.appendChild(img);
     img.ontouchmove = "swipeImage(event);";
+
     img.src = data.photos[i].img_src;
-    img.onload = function () {
-      loadingImg("none");
+
+    img.onload = () => {
       enableImage();
       enableBtn();
       document.getElementById("toggle").style.visibility = "hidden";
@@ -727,8 +725,6 @@ function goToTopOfThePage() {
   document.documentElement.scrollTop = 0;
 }
 
-
-
 /**
  * *This function will make you jump to the page where you can choose the rover of your own choice;
  */
@@ -750,10 +746,8 @@ function getDateSelect() {
 }
 
 function open_ham() {
-  
+  // preventBodyScroll();
 
-// preventBodyScroll();
- 
   // console.log(scrollY);
   document.body.style.overflowY = "hidden";
   document.body.style.height = "100%";
@@ -765,15 +759,7 @@ function open_ham() {
   } catch (error) {
     console.log("👌");
   }
-  
-
-  
-
- 
 }
-
-
-
 
 // when use press back button on phone or desktop browser this it will jump you to the prev page.
 
@@ -804,32 +790,18 @@ function resetSelectOptionAfterRoverChange() {
   document.getElementById("year").selectedIndex = "0";
 }
 
-
-function checkForDate()
-{
+function checkForDate() {
   var day = document.getElementById("day");
   var mon = document.getElementById("month");
   var year = document.getElementById("year");
-  if(day.value == "0")
-  {
+  if (day.value == "0") {
+    alert("Please Enter a valid date!");
+  } else if (mon.value == "0") {
+    alert("Please Enter a valid date!");
+  } else if (year.value == "0") {
     alert("Please Enter a valid date!");
   }
-  else if(mon.value == "0")
-  {
-    alert("Please Enter a valid date!");
-
-  }
-  else if(year.value == "0")
-  {
-    alert("Please Enter a valid date!");
-
-  }
-
-  
-
 }
-
-
 
 function getViewportDimensions() {
   // First we get the viewport height and we multiple it by 1% to get a value for a vh unit

@@ -10,6 +10,19 @@ html {
           box-sizing: border-box;
 }
 
+.title_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title_head p {
+  font-family: montserrat;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  text-align: center;
+  font-weight: 700;
+}
+
 body {
   background-color: #5a2017;
 }
@@ -143,7 +156,7 @@ body.modal-open {
   display: block;
   text-decoration: none;
   color: white;
-  font-family: montserrat;
+  font-family: "Open Sans", sans-serif;
   font-size: 17px;
   font-weight: 700;
 }
@@ -420,7 +433,9 @@ body.modal-open {
   height: 100px;
 }
 
-.choose_date_page .choose_date_box #day, .choose_date_page .choose_date_box #month, .choose_date_page .choose_date_box #year {
+.choose_date_page .choose_date_box #day,
+.choose_date_page .choose_date_box #month,
+.choose_date_page .choose_date_box #year {
   border: none;
   border-radius: 3px;
   width: 66px;
@@ -473,7 +488,7 @@ body.modal-open {
           justify-content: center;
   margin-left: 13px;
   color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 12px;
 }
 
@@ -688,7 +703,8 @@ body.modal-open {
           align-items: center;
 }
 
-.button #next, .button #prev {
+.button #next,
+.button #prev {
   color: white;
   font-size: 32px;
   -webkit-transform: scale(0.5);
@@ -963,7 +979,7 @@ button:focus {
     font-size: 3.3rem;
   }
   .main_body .heading .subtitle p {
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 3vw, 1.3rem);
   }
   .explore_btn:hover {
     -webkit-transform: translateY(10%);
@@ -1357,7 +1373,9 @@ button:focus {
             justify-content: center;
     height: 100px;
   }
-  .choose_date_box #day, .choose_date_box #month, .choose_date_box #year {
+  .choose_date_box #day,
+  .choose_date_box #month,
+  .choose_date_box #year {
     border: none;
     border-radius: 3px;
     width: 66px;
