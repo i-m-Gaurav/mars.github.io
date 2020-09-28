@@ -599,8 +599,10 @@ button:focus {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-around;
+  
 }
 .card {
   margin: auto;
