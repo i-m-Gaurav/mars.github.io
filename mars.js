@@ -821,6 +821,6 @@ function getViewportDimensions() {
     document.documentElement.style.setProperty("--vw", `${vw}px`);
   });
 }
-// hello sir
-a;lksdjf;alksdjf
-jalkdsjfa;lsdf
+const function(){
+  const new object();
+}
