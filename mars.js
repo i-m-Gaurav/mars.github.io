@@ -821,6 +821,4 @@ function getViewportDimensions() {
     document.documentElement.style.setProperty("--vw", `${vw}px`);
   });
 }
-const function(){
-  const new object();
-}
+// added some new comments
